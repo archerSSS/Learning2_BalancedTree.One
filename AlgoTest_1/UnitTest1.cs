@@ -13,6 +13,7 @@ namespace AlgoTest_1
             int[] a = new int[] { 16, 8, 19, 6, 10, 17, 22, 5, 7, 9, 11, 16, 18, 21, 23 };
             int[] b = BalancedBST.GenerateBBSTArray(a);
             ElementByIndex(b, 0);
+            Assert.AreEqual(15, b.Length);
         }
 
         [TestMethod]
@@ -21,6 +22,7 @@ namespace AlgoTest_1
             int[] a = new int[] { 31, 22, 11, 1, 52, 55, 32 };
             int[] b = BalancedBST.GenerateBBSTArray(a);
             ElementByIndex(b, 0);
+            Assert.AreEqual(7, b.Length);
         }
 
         [TestMethod]
@@ -29,6 +31,7 @@ namespace AlgoTest_1
             int[] a = new int[] { -93, 54, 3 };
             int[] b = BalancedBST.GenerateBBSTArray(a);
             ElementByIndex(b, 0);
+            Assert.AreEqual(3, b.Length);
         }
 
         [TestMethod]
@@ -44,6 +47,7 @@ namespace AlgoTest_1
                                     28, 84, 55};
             int[] b = BalancedBST.GenerateBBSTArray(a);
             ElementByIndex(b, 0);
+            Assert.AreEqual(31, b.Length);
         }
 
         [TestMethod]
