@@ -8,15 +8,21 @@ namespace AlgorithmsDataStructures2
     {
         public static int[] GenerateBBSTArray(int[] a)
         {
-            a = a.OrderBy(i => i).ToArray();
-            int size = a.Length;
-            int depth = -1;
-            for (; size != 0; depth++)
-                size >>= 1;
+            
+            if (a != null)
+            {
+                a = a.OrderBy(i => i).ToArray();
+                int depth = -1;
+                for (int size = a.Length; size != 0; depth++)
+                    size >>= 1;
 
-            int[] b = new int[(2 << (depth)) - 1];
-            GetArray(b, a, 0);
-            return b;
+                int[] b = new int[(2 << (depth)) - 1];
+                if (a.Length == b.Length)
+                {
+                    GetArray(b, a, 0);
+                    return b;
+                }
+            }
             return null;
         }
 

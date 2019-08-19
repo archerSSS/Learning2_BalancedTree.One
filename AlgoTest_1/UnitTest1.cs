@@ -46,6 +46,22 @@ namespace AlgoTest_1
             ElementByIndex(b, 0);
         }
 
+        [TestMethod]
+        public void TestMethod_5()
+        {
+            int[] a = null;
+            int[] b = BalancedBST.GenerateBBSTArray(a);
+            Assert.AreEqual(null, b);
+        }
+
+        [TestMethod]
+        public void TestMethod_6()
+        {
+            int[] a = new int[] { 1, 5, 13, 6, 3 };
+            int[] b = BalancedBST.GenerateBBSTArray(a);
+            Assert.AreEqual(null, b);
+        }
+
         private void ElementByIndex(int[] values, int nx)
         {
             if (nx * 2 + 2 < values.Length)
